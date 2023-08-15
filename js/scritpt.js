@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event){
             var entry= JSON.parse(this.responseText);
 
 			var initDiv = document.getElementById("content");
-			initDiv.innerHTML = ""; // Clears the content of the div
+      initDiv.innerHTML = "  <h2 href=\"http://ttu.edu.jo\">Back</h2>"; // Clears the content of the div
 
 
 			for(var i=0 ; i < entry.length ;i++){
