@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function(event){
             var entry= JSON.parse(this.responseText);
 
 			var initDiv = document.getElementById("content");
-      initDiv.innerHTML = "  <h2 href=\"http://ttu.edu.jo\">Back</h2>"; // Clears the content of the div
-
+      initDiv.innerHTML = " "; // Clears the content of the div
+      initDiv.innerHTML = "<a href=\"\">Back</a>";
 
 			for(var i=0 ; i < entry.length ;i++){
         
@@ -57,9 +57,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 			var initDiv = document.getElementById("content");
 			initDiv.innerHTML = ""; // Clears the content of the div
-      
-
-			for(var i=0 ; i < entry.length ;i++){
+                        initDiv.innerHTML = "<a href=\"\">Back</a>";			for(var i=0 ; i < entry.length ;i++){
         
           currentItem = item.replace(new RegExp("{{name}}", "g"), entry[i].name);
           currentItem = currentItem.replace(new RegExp("{{description}}", "g"), entry[i].description);
@@ -98,8 +96,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 			var initDiv = document.getElementById("content");
 			initDiv.innerHTML = ""; // Clears the content of the div
-
-
+                        initDiv.innerHTML = "<a href=\"\">Back</a>";
+				    
 			for(var i=0 ; i < entry.length ;i++){
         
           currentItem = item.replace(new RegExp("{{name}}", "g"), entry[i].name);
