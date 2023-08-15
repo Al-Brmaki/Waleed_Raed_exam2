@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 			var initDiv = document.getElementById("content");
       initDiv.innerHTML = " "; // Clears the content of the div
-      initDiv.innerHTML = "<a href=\"\">Back</a>";
 
 			for(var i=0 ; i < entry.length ;i++){
         
@@ -25,7 +24,8 @@ document.addEventListener("DOMContentLoaded", function(event){
           console.log(initDiv)		
 			}
       document.querySelector("#content").innerHTML= document.querySelector("#content").innerHTML+fullitem;
-      document.querySelector("#header").innerHTML= "Sushi Menu";
+      document.querySelector("#header").innerHTML= "Sandwiches Menu";
+      document.querySelector("a").innerHTML= "Back";	
       
 			    }
 		    };
@@ -55,9 +55,10 @@ document.addEventListener("DOMContentLoaded", function(event){
 			    if((this.readyState==4)&&(this.status==200)){
             var entry= JSON.parse(this.responseText);
 
-			var initDiv = document.getElementById("content");
-			initDiv.innerHTML = ""; // Clears the content of the div
-                        initDiv.innerHTML = "<a href=\"\">Back</a>";			for(var i=0 ; i < entry.length ;i++){
+	var initDiv = document.getElementById("content");
+	initDiv.innerHTML = ""; // Clears the content of the div
+        	
+	for(var i=0 ; i < entry.length ;i++){
         
           currentItem = item.replace(new RegExp("{{name}}", "g"), entry[i].name);
           currentItem = currentItem.replace(new RegExp("{{description}}", "g"), entry[i].description);
@@ -65,7 +66,9 @@ document.addEventListener("DOMContentLoaded", function(event){
           console.log(initDiv)		
 			}
       document.querySelector("#content").innerHTML= document.querySelector("#content").innerHTML+fullitem;
-      document.querySelector("#header").innerHTML= "Beef Menu";
+      document.querySelector("#header").innerHTML= "Dinner Menu";
+      document.querySelector("a").innerHTML= "Back";
+
 
 			    }
 		    };
@@ -96,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 			var initDiv = document.getElementById("content");
 			initDiv.innerHTML = ""; // Clears the content of the div
-                        initDiv.innerHTML = "<a href=\"\">Back</a>";
+                
 				    
 			for(var i=0 ; i < entry.length ;i++){
         
@@ -106,7 +109,9 @@ document.addEventListener("DOMContentLoaded", function(event){
           console.log(initDiv)		
 			}
       document.querySelector("#content").innerHTML= document.querySelector("#content").innerHTML+fullitem;
-      document.querySelector("#header").innerHTML= "Chicken Menu";
+      document.querySelector("#header").innerHTML= "Lunch Menu";
+      document.querySelector("a").innerHTML= "Back";
+
 			    }
 		    };
         xttp.open("GET", "data/chicken.json", true);
